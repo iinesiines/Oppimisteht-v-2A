@@ -6,8 +6,30 @@
   <meta name="description" content="Nordic Notes — kuvallinen ja responsiivinen CSS Grid -harjoitussivusto.">
   <meta name="theme-color" content="#203a36">
   <title>Nordic Notes | CSS Grid -oppimistehtävä 2A</title>
-  <link rel="stylesheet" href="styles/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- GitHub Pages: tiedostot sijaitsevat tässä repositoriossa päätasolla. -->
+  <style>
+    /* Korjattu Font Awesome -fontin sijainti navigaation ikoneille. */
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url('fontawesome-webfont.woff2') format('woff2'),
+           url('fontawesome-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+    /* Taustakuvien polut, kun SVG-kuvat ovat HTML:n kanssa samassa kansiossa. */
+    .otsikko {
+      background-image: linear-gradient(100deg, rgba(21,49,51,.91) 1%, rgba(29,65,66,.68) 54%, rgba(38,70,66,.16)), url('otsikko.svg');
+    }
+    .mainos::before {
+      background-image: linear-gradient(100deg, rgba(21,47,43,.89), rgba(31,56,54,.5)), url('mainos1.svg');
+    }
+    .mainos2::before {
+      background-image: linear-gradient(100deg, rgba(55,45,47,.9), rgba(64,59,62,.38)), url('mainos2.svg');
+    }
+  </style>
 </head>
 <body>
   <a class="ohita" href="#otsikko">Siirry sisältöön</a>
@@ -37,7 +59,7 @@
     </header>
 
     <article class="kortti kortti1" id="kortti1" aria-labelledby="kortti1-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti1.svg" alt="Vuonomaisema ja vuoret" loading="eager" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti1.svg" alt="Vuonomaisema ja vuoret" loading="eager" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti1 <span aria-hidden="true">/</span> 01</span>
         <h2 id="kortti1-otsikko">Vuonojen rauha</h2>
@@ -46,7 +68,7 @@
     </article>
 
     <article class="kortti kortti2" id="kortti2" aria-labelledby="kortti2-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti2.svg" alt="Havumetsäinen vuorimaisema" loading="eager" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti2.svg" alt="Havumetsäinen vuorimaisema" loading="eager" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti2 <span aria-hidden="true">/</span> 02</span>
         <h2 id="kortti2-otsikko">Metsän syli</h2>
@@ -55,7 +77,7 @@
     </article>
 
     <article class="kortti kortti3" id="kortti3" aria-labelledby="kortti3-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti3.svg" alt="Järvimaisema pohjoisessa" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti3.svg" alt="Järvimaisema pohjoisessa" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti3 <span aria-hidden="true">/</span> 03</span>
         <h2 id="kortti3-otsikko">Hiljaiset järvet</h2>
@@ -64,7 +86,7 @@
     </article>
 
     <article class="kortti kortti4" id="kortti4" aria-labelledby="kortti4-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti4.svg" alt="Tunturien siluetteja" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti4.svg" alt="Tunturien siluetteja" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti4 <span aria-hidden="true">/</span> 04</span>
         <h2 id="kortti4-otsikko">Tunturin taika</h2>
@@ -73,7 +95,7 @@
     </article>
 
     <article class="kortti kortti5" id="kortti5" aria-labelledby="kortti5-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti5.svg" alt="Auringonlasku vuoristossa" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti5.svg" alt="Auringonlasku vuoristossa" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti5 <span aria-hidden="true">/</span> 05</span>
         <h2 id="kortti5-otsikko">Kultainen hetki</h2>
@@ -82,7 +104,7 @@
     </article>
 
     <article class="kortti kortti6" id="kortti6" aria-labelledby="kortti6-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti6.svg" alt="Pieni mökki vuorten keskellä" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti6.svg" alt="Pieni mökki vuorten keskellä" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti6 <span aria-hidden="true">/</span> 06</span>
         <h2 id="kortti6-otsikko">Pieni mökkiretki</h2>
@@ -91,7 +113,7 @@
     </article>
 
     <article class="kortti kortti7" id="kortti7" aria-labelledby="kortti7-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti7.svg" alt="Pohjoisen rannikkoseudun maisema" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti7.svg" alt="Pohjoisen rannikkoseudun maisema" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti7 <span aria-hidden="true">/</span> 07</span>
         <h2 id="kortti7-otsikko">Meren äärellä</h2>
@@ -100,7 +122,7 @@
     </article>
 
     <article class="kortti kortti8" id="kortti8" aria-labelledby="kortti8-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti8.svg" alt="Sammaleista luontomaisemaa" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti8.svg" alt="Sammaleista luontomaisemaa" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti8 <span aria-hidden="true">/</span> 08</span>
         <h2 id="kortti8-otsikko">Sammaleinen polku</h2>
@@ -109,7 +131,7 @@
     </article>
 
     <article class="kortti kortti9" id="kortti9" aria-labelledby="kortti9-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti9.svg" alt="Aamunkoiton vuoret" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti9.svg" alt="Aamunkoiton vuoret" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti9 <span aria-hidden="true">/</span> 09</span>
         <h2 id="kortti9-otsikko">Aamun ensimmäinen valo</h2>
@@ -118,7 +140,7 @@
     </article>
 
     <article class="kortti kortti10" id="kortti10" aria-labelledby="kortti10-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti10.svg" alt="Pastellinsävyinen vuoriston maisema" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti10.svg" alt="Pastellinsävyinen vuoriston maisema" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti10 <span aria-hidden="true">/</span> 10</span>
         <h2 id="kortti10-otsikko">Taivaan sävyt</h2>
@@ -127,7 +149,7 @@
     </article>
 
     <article class="kortti kortti11" id="kortti11" aria-labelledby="kortti11-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti11.svg" alt="Harmoninen pohjoisen vesistömaisema" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti11.svg" alt="Harmoninen pohjoisen vesistömaisema" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti11 <span aria-hidden="true">/</span> 11</span>
         <h2 id="kortti11-otsikko">Pohjoinen valo</h2>
@@ -136,7 +158,7 @@
     </article>
 
     <article class="kortti kortti12" id="kortti12" aria-labelledby="kortti12-otsikko">
-      <div class="kortti-kuva"><img src="assets/kortti12.svg" alt="Pohjoinen maisema ja pieni mökki" loading="lazy" width="1200" height="760"></div>
+      <div class="kortti-kuva"><img src="kortti12.svg" alt="Pohjoinen maisema ja pieni mökki" loading="lazy" width="1200" height="760"></div>
       <div class="kortti-sisalto">
         <span class="kortti-tunnus">kortti12 <span aria-hidden="true">/</span> 12</span>
         <h2 id="kortti12-otsikko">Maiseman äärellä</h2>
